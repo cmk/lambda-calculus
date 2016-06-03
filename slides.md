@@ -11,7 +11,7 @@
 ---
 
 
-<img src="img/lambda.png" height="42" width="42">
+<img src="img/lambda.jpg" height="42" width="42">
 
 
 
