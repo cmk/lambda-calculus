@@ -412,58 +412,6 @@ For example, one can easily show that SKK reduces to I:
 
 ---
 
-#Application: Thrush Combinator
-
-The following Scala code is correct but difficult to read:
-
-    !scala
-    ((x: Int) => (x / 2))((1 to 10)
-                            .filter(_ % 2 == 0)
-                            .foldLeft(0)(_+_))
-
----
-
-    !scala
-    case class Thrush[A](x: A) {
-      def into[B](g: A => B): B = {
-        g(x)
-      }
-    }
-
----
-
-    !scala
-    Thrush((1 to 10)
-      .filter(_ % 2 == 0)
-      .foldLeft(0)(_ + _))
-      .into(_ / 2)
-
----
-
-    !scala
-
-    implicit def int2Thrush(x: Int) = Thrush(x)
-
-    (1 to 10)
-      .filter(_ % 2 == 0)
-      .foldLeft(0)(_ + _)
-      .into(_ / 2)
-
----
-
-This comes in handy for designing expressive domain APIs and data pipelines:
-
-    !scala
-    accounts.filter(_ belongsTo "John S.")
-            .map(_.calculateInterest)
-            .foldLeft(0)(_ + _)
-            .into {x: Int =>
-              updateBooks journalize(Ledger.INTEREST, x)
-            }
-
-
----
-
 #The Y combinator
 
 The most famous combinator is probably Curry's Y (Sage bird) combinator: 
@@ -541,12 +489,55 @@ Good abstractions are hard to come by, so the plain but powerful lambda is an in
 ---
 
 
-<img src="img/dijkstra.jpg" height="300">
-$$
-$$
-"Computer science is no more about computers than astronomy is about telescopes." 
+#Application: Thrush Combinator
 
-- Edsger Dijkstra 
+The following Scala code is correct but difficult to read:
+
+    !scala
+    ((x: Int) => (x / 2))((1 to 10)
+                            .filter(_ % 2 == 0)
+                            .foldLeft(0)(_+_))
+
+---
+
+    !scala
+    case class Thrush[A](x: A) {
+      def into[B](g: A => B): B = {
+        g(x)
+      }
+    }
+
+---
+
+    !scala
+    Thrush((1 to 10)
+      .filter(_ % 2 == 0)
+      .foldLeft(0)(_ + _))
+      .into(_ / 2)
+
+---
+
+    !scala
+
+    implicit def int2Thrush(x: Int) = Thrush(x)
+
+    (1 to 10)
+      .filter(_ % 2 == 0)
+      .foldLeft(0)(_ + _)
+      .into(_ / 2)
+
+---
+
+This comes in handy for designing expressive domain APIs and data pipelines:
+
+    !scala
+    accounts.filter(_ belongsTo "John S.")
+            .map(_.calculateInterest)
+            .foldLeft(0)(_ + _)
+            .into {x: Int =>
+              updateBooks journalize(Ledger.INTEREST, x)
+            }
+
 
 ---
 
@@ -561,5 +552,14 @@ $$
 <p style="clear: both;">
 
 ----
+
+<img src="img/dijkstra.jpg" height="300">
+$$
+$$
+"Computer science is no more about computers than astronomy is about telescopes." 
+
+- Edsger Dijkstra 
+
+---
 
 #Thanks!
