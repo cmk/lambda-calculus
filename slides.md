@@ -494,7 +494,7 @@ Hence Y𝑎=𝑎(Y𝑎).
 
 Applied to a lambda function with one variable the Y combinator usually does not terminate. 
 
-For example Y𝜆𝑎.𝑎 reduces to $\Omega$:
+For example Y𝜆𝑎.𝑎 reduces to the Mockingbird combinator $\Omega$:
 
 𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝜆𝑎.𝑎
 
