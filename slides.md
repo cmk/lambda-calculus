@@ -417,7 +417,9 @@ For example, one can easily show that SKK reduces to I:
 The following Scala code is correct but difficult to read:
 
     !scala
-    ((x: Int) => (x / 2))((1 to 10).filter(_ % 2 == 0).foldLeft(0)(_+_))
+    ((x: Int) => (x / 2))((1 to 10)
+                            .filter(_ % 2 == 0)
+                            .foldLeft(0)(_+_))
 
 ---
 
@@ -461,6 +463,8 @@ This comes in handy for designing expressive domain APIs and data pipelines:
 
 
 ---
+
+#The Y combinator
 
 The most famous combinator is probably Curry's Y (Sage bird) combinator: 
 $$
