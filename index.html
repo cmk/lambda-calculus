@@ -95,7 +95,7 @@
             </aside>
             
             <aside class="page_number">
-              1/46
+              1/52
             </aside>
 
           </footer>
@@ -129,7 +129,7 @@ The 𝜆 calculus was introduced in the 1930s by Alonzo Church as a way of forma
             </aside>
             
             <aside class="page_number">
-              2/46
+              2/52
             </aside>
 
           </footer>
@@ -163,7 +163,7 @@ It is the smallest such universal programming language in the world (up to equiv
             </aside>
             
             <aside class="page_number">
-              3/46
+              3/52
             </aside>
 
           </footer>
@@ -201,7 +201,7 @@ It is a theory more related to software than to hardware.</p>
             </aside>
             
             <aside class="page_number">
-              4/46
+              4/52
             </aside>
 
           </footer>
@@ -240,7 +240,7 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             </aside>
             
             <aside class="page_number">
-              5/46
+              5/52
             </aside>
 
           </footer>
@@ -271,7 +271,7 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             </aside>
             
             <aside class="page_number">
-              6/46
+              6/52
             </aside>
 
           </footer>
@@ -310,7 +310,7 @@ The only keywords used in the language are 𝜆 and the dot.</p></section>
             </aside>
             
             <aside class="page_number">
-              7/46
+              7/52
             </aside>
 
           </footer>
@@ -347,7 +347,7 @@ The body of the function is another expression. </p></section>
             </aside>
             
             <aside class="page_number">
-              8/46
+              8/52
             </aside>
 
           </footer>
@@ -384,7 +384,7 @@ That means, when we apply this function to an argument, each 𝑥 in the body of
             </aside>
             
             <aside class="page_number">
-              9/46
+              9/52
             </aside>
 
           </footer>
@@ -420,7 +420,7 @@ You also eliminate the head of the abstraction, since its only purpose was to bi
             </aside>
             
             <aside class="page_number">
-              10/46
+              10/52
             </aside>
 
           </footer>
@@ -454,7 +454,7 @@ $$
             </aside>
             
             <aside class="page_number">
-              11/46
+              11/52
             </aside>
 
           </footer>
@@ -489,7 +489,7 @@ $$
             </aside>
             
             <aside class="page_number">
-              12/46
+              12/52
             </aside>
 
           </footer>
@@ -525,7 +525,7 @@ In the expression 𝜆𝑥.𝑥𝑦 the 𝑥 in the body is a bound variable bec
             </aside>
             
             <aside class="page_number">
-              13/46
+              13/52
             </aside>
 
           </footer>
@@ -559,7 +559,7 @@ That whole abstraction can be applied to an argument, 𝑧, like this: (𝜆𝑥
             </aside>
             
             <aside class="page_number">
-              14/46
+              14/52
             </aside>
 
           </footer>
@@ -595,7 +595,7 @@ Because of this, there’s a form of equivalence between lambda terms called alp
             </aside>
             
             <aside class="page_number">
-              15/46
+              15/52
             </aside>
 
           </footer>
@@ -628,7 +628,7 @@ Because of this, there’s a form of equivalence between lambda terms called alp
             </aside>
             
             <aside class="page_number">
-              16/46
+              16/52
             </aside>
 
           </footer>
@@ -664,7 +664,7 @@ This formulation was originally discovered by Moses Schönfinkel in the 1920s b
             </aside>
             
             <aside class="page_number">
-              17/46
+              17/52
             </aside>
 
           </footer>
@@ -698,7 +698,7 @@ When you apply the first argument, you’re binding 𝑥, eliminating the outer 
             </aside>
             
             <aside class="page_number">
-              18/46
+              18/52
             </aside>
 
           </footer>
@@ -736,7 +736,7 @@ When you apply the first argument, you’re binding 𝑥, eliminating the outer 
             </aside>
             
             <aside class="page_number">
-              19/46
+              19/52
             </aside>
 
           </footer>
@@ -772,7 +772,7 @@ This corresponds to a fully evaluated expression, or, in programming, a fully e�
             </aside>
             
             <aside class="page_number">
-              20/46
+              20/52
             </aside>
 
           </footer>
@@ -809,7 +809,7 @@ This corresponds to a fully evaluated expression, or, in programming, a fully e�
             </aside>
             
             <aside class="page_number">
-              21/46
+              21/52
             </aside>
 
           </footer>
@@ -848,7 +848,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              22/46
+              22/52
             </aside>
 
           </footer>
@@ -861,8 +861,41 @@ This matters in programming because terms that diverge won’t produce an answer
           <div class="inner">
             
             
-            <section><p>Here’s an example of a lambda term called the $\Omega$ combinator: 𝜆𝑥.𝑥𝑥</p>
-<p>The $\Omega$ combinator diverges when applied to itself:</p>
+            <section><p>Here’s an example of a lambda term called the $\Omega$ (mockingbird) combinator: </p>
+<p><center>
+𝜆𝑥.𝑥𝑥
+</center></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>The $\Omega$ combinator diverges when applied to itself:</p>
 <p>(𝜆𝑥.𝑥𝑥)(𝜆𝑥.𝑥𝑥)</p>
 <p>(𝜆𝑥.𝑥𝑥)(𝜆𝑥.𝑥𝑥)</p>
 <p>(𝜆𝑥.𝑥𝑥)(𝜆𝑥.𝑥𝑥)</p>
@@ -884,7 +917,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              23/46
+              24/52
             </aside>
 
           </footer>
@@ -918,7 +951,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              24/46
+              25/52
             </aside>
 
           </footer>
@@ -949,7 +982,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              25/46
+              26/52
             </aside>
 
           </footer>
@@ -985,7 +1018,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              26/46
+              27/52
             </aside>
 
           </footer>
@@ -1021,7 +1054,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              27/46
+              28/52
             </aside>
 
           </footer>
@@ -1058,7 +1091,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              28/46
+              29/52
             </aside>
 
           </footer>
@@ -1092,7 +1125,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              29/46
+              30/52
             </aside>
 
           </footer>
@@ -1126,7 +1159,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              30/46
+              31/52
             </aside>
 
           </footer>
@@ -1162,7 +1195,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              31/46
+              32/52
             </aside>
 
           </footer>
@@ -1196,7 +1229,7 @@ Static type systems (e.g. Haskell, Scala) will reject this term from being well-
             </aside>
             
             <aside class="page_number">
-              32/46
+              33/52
             </aside>
 
           </footer>
@@ -1232,7 +1265,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              33/46
+              34/52
             </aside>
 
           </footer>
@@ -1241,18 +1274,52 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
       
       <!-- slide source: slides.md -->
       <div class="slide-wrapper">
-        <div class="slide has_notes">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>In his classic book <a href="http://www.amazon.com/Mock-Mockingbird-Other-Logic-Puzzles/dp/0192801422">To Mock a Mockingbird</a>, Raymond Smullyan teaches combinatory logic using the analogy of songbirds in a forest.
+$$
+$$
+The bird names have gone a long way in establishing a common vocabulary of programming idioms and techniques.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              35/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
           <div class="inner">
             
             <header><h1>Challenge Question:</h1></header>
             
             
             <section><p>What do these combinators do?</p>
-<p>1) 𝜆𝑥.𝑥</p>
-<p>2) 𝜆𝑥𝑦.𝑥</p>
-<p>3) 𝜆𝑥𝑦.𝑥𝑦</p>
-<p>4) 𝜆𝑥𝑦𝑧.𝑥𝑧𝑦</p>
-<p class="notes">id, const, apply, flip</p></section>
+<p>1) 𝜆𝑥.𝑥  (Identity)</p>
+<p>2) 𝜆𝑥.𝑥𝑥 (Mockingbird) </p>
+<p>3) 𝜆𝑥𝑦.𝑥 (Kestrel)</p>
+<p>4) 𝜆𝑥𝑦.𝑦𝑥 (Thrush) </p>
+<p>5) 𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧) (Starling)</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1270,43 +1337,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              34/46
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>SKI Combinators</h1></header>
-            
-            
-            <section><p>The Starling, Kestrel, and Identity combinators are defined as:</p>
-<p>S := 𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧)</p>
-<p>K := 𝜆𝑥𝑦.𝑥</p>
-<p>I := 𝜆𝑥.𝑥</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              35/46
+              36/52
             </aside>
 
           </footer>
@@ -1319,7 +1350,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
           <div class="inner">
             
             
-            <section><p>Remarkably, Schönfinkel also showed that all closed lambda expressions can be expressed in terms of the S, K, and I combinators. 
+            <section><p>Remarkably, Schönfinkel showed that all closed lambda expressions can be expressed in terms of the Starling and Kestrel and Identity combinators. 
 $$
 $$
 All operations in lambda calculus are expressed in the SKI combinator calculus as binary trees whose leaves are one of the three symbols S, K, and I.</p></section>
@@ -1340,7 +1371,7 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
             </aside>
             
             <aside class="page_number">
-              36/46
+              37/52
             </aside>
 
           </footer>
@@ -1376,7 +1407,193 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
             </aside>
             
             <aside class="page_number">
-              37/46
+              38/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Application: Thrush Combinator</h1></header>
+            
+            
+            <section><p>The following Scala code is correct but difficult to read:</p>
+<div class="highlight"><pre><span></span><span class="o">((</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="o">))((</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">10</span><span class="o">).</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">).</span><span class="n">foldLeft</span><span class="o">(</span><span class="mi">0</span><span class="o">)(</span><span class="k">_</span><span class="o">+</span><span class="k">_</span><span class="o">))</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              39/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">Thrush</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">x</span><span class="k">:</span> <span class="kt">A</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">into</span><span class="o">[</span><span class="kt">B</span><span class="o">](</span><span class="n">g</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span><span class="k">:</span> <span class="kt">B</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">g</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              40/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="nc">Thrush</span><span class="o">((</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">10</span><span class="o">)</span>
+  <span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+  <span class="o">.</span><span class="n">foldLeft</span><span class="o">(</span><span class="mi">0</span><span class="o">)(</span><span class="k">_</span> <span class="o">+</span> <span class="k">_</span><span class="o">))</span>
+  <span class="o">.</span><span class="n">into</span><span class="o">(</span><span class="k">_</span> <span class="o">/</span> <span class="mi">2</span><span class="o">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              41/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="k">implicit</span> <span class="k">def</span> <span class="n">int2Thrush</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="nc">Thrush</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>
+
+<span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">10</span><span class="o">)</span>
+  <span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+  <span class="o">.</span><span class="n">foldLeft</span><span class="o">(</span><span class="mi">0</span><span class="o">)(</span><span class="k">_</span> <span class="o">+</span> <span class="k">_</span><span class="o">)</span>
+  <span class="o">.</span><span class="n">into</span><span class="o">(</span><span class="k">_</span> <span class="o">/</span> <span class="mi">2</span><span class="o">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              42/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            
+            <section><p>This comes in handy for designing expressive domain APIs and data pipelines:</p>
+<div class="highlight"><pre><span></span><span class="n">accounts</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span> <span class="n">belongsTo</span> <span class="s">&quot;John S.&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="k">_</span><span class="o">.</span><span class="n">calculateInterest</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">foldLeft</span><span class="o">(</span><span class="mi">0</span><span class="o">)(</span><span class="k">_</span> <span class="o">+</span> <span class="k">_</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">into</span> <span class="o">{</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span>
+          <span class="n">updateBooks</span> <span class="n">journalize</span><span class="o">(</span><span class="nc">Ledger</span><span class="o">.</span><span class="nc">INTEREST</span><span class="o">,</span> <span class="n">x</span><span class="o">)</span>
+        <span class="o">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              43/52
             </aside>
 
           </footer>
@@ -1389,7 +1606,7 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
           <div class="inner">
             
             
-            <section><p>However the most famous combinator is probably Curry's Y (Sage bird) combinator: 
+            <section><p>The most famous combinator is probably Curry's Y (Sage bird) combinator: 
 $$
 $$
 <center>
@@ -1412,7 +1629,7 @@ $$
             </aside>
             
             <aside class="page_number">
-              38/46
+              44/52
             </aside>
 
           </footer>
@@ -1450,7 +1667,7 @@ Hence Y𝑎=𝑎(Y𝑎). </p></section>
             </aside>
             
             <aside class="page_number">
-              39/46
+              45/52
             </aside>
 
           </footer>
@@ -1487,7 +1704,7 @@ Hence Y𝑎=𝑎(Y𝑎). </p></section>
             </aside>
             
             <aside class="page_number">
-              40/46
+              46/52
             </aside>
 
           </footer>
@@ -1524,7 +1741,7 @@ Y can be used to allow an expression to contain a reference to itself and reduce
             </aside>
             
             <aside class="page_number">
-              41/46
+              47/52
             </aside>
 
           </footer>
@@ -1560,7 +1777,7 @@ Y=SSK(S(K(SS(S(SSK))))K)
             </aside>
             
             <aside class="page_number">
-              42/46
+              48/52
             </aside>
 
           </footer>
@@ -1598,7 +1815,7 @@ Good abstractions are hard to come by, so the plain but powerful lambda is an in
             </aside>
             
             <aside class="page_number">
-              43/46
+              49/52
             </aside>
 
           </footer>
@@ -1635,7 +1852,7 @@ $$
             </aside>
             
             <aside class="page_number">
-              44/46
+              50/52
             </aside>
 
           </footer>
@@ -1673,7 +1890,7 @@ $$
             </aside>
             
             <aside class="page_number">
-              45/46
+              51/52
             </aside>
 
           </footer>
@@ -1704,7 +1921,7 @@ $$
             </aside>
             
             <aside class="page_number">
-              46/46
+              52/52
             </aside>
 
           </footer>
@@ -1864,31 +2081,31 @@ $$
       
       
       <tr id="toc-row-25">
-        <th><a href="#slide25">Types, Type Constructors &amp; Combinators</a></th>
+        <th><a href="#slide25">-</a></th>
         <td><a href="#slide25">25</a></td>
       </tr>
       
       
       <tr id="toc-row-26">
-        <th><a href="#slide26">Natural Numbers</a></th>
+        <th><a href="#slide26">Types, Type Constructors &amp; Combinators</a></th>
         <td><a href="#slide26">26</a></td>
       </tr>
       
       
       <tr id="toc-row-27">
-        <th><a href="#slide27">-</a></th>
+        <th><a href="#slide27">Natural Numbers</a></th>
         <td><a href="#slide27">27</a></td>
       </tr>
       
       
       <tr id="toc-row-28">
-        <th><a href="#slide28">Boolean Algebra</a></th>
+        <th><a href="#slide28">-</a></th>
         <td><a href="#slide28">28</a></td>
       </tr>
       
       
       <tr id="toc-row-29">
-        <th><a href="#slide29">-</a></th>
+        <th><a href="#slide29">Boolean Algebra</a></th>
         <td><a href="#slide29">29</a></td>
       </tr>
       
@@ -1900,37 +2117,37 @@ $$
       
       
       <tr id="toc-row-31">
-        <th><a href="#slide31">Tuples and Lists</a></th>
+        <th><a href="#slide31">-</a></th>
         <td><a href="#slide31">31</a></td>
       </tr>
       
       
       <tr id="toc-row-32">
-        <th><a href="#slide32">-</a></th>
+        <th><a href="#slide32">Tuples and Lists</a></th>
         <td><a href="#slide32">32</a></td>
       </tr>
       
       
       <tr id="toc-row-33">
-        <th><a href="#slide33">Combinators</a></th>
+        <th><a href="#slide33">-</a></th>
         <td><a href="#slide33">33</a></td>
       </tr>
       
       
       <tr id="toc-row-34">
-        <th><a href="#slide34">Challenge Question:</a></th>
+        <th><a href="#slide34">Combinators</a></th>
         <td><a href="#slide34">34</a></td>
       </tr>
       
       
       <tr id="toc-row-35">
-        <th><a href="#slide35">SKI Combinators</a></th>
+        <th><a href="#slide35">-</a></th>
         <td><a href="#slide35">35</a></td>
       </tr>
       
       
       <tr id="toc-row-36">
-        <th><a href="#slide36">-</a></th>
+        <th><a href="#slide36">Challenge Question:</a></th>
         <td><a href="#slide36">36</a></td>
       </tr>
       
@@ -1948,7 +2165,7 @@ $$
       
       
       <tr id="toc-row-39">
-        <th><a href="#slide39">-</a></th>
+        <th><a href="#slide39">Application: Thrush Combinator</a></th>
         <td><a href="#slide39">39</a></td>
       </tr>
       
@@ -1966,7 +2183,7 @@ $$
       
       
       <tr id="toc-row-42">
-        <th><a href="#slide42">Challenge</a></th>
+        <th><a href="#slide42">-</a></th>
         <td><a href="#slide42">42</a></td>
       </tr>
       
@@ -1984,14 +2201,50 @@ $$
       
       
       <tr id="toc-row-45">
-        <th><a href="#slide45">Further Reading</a></th>
+        <th><a href="#slide45">-</a></th>
         <td><a href="#slide45">45</a></td>
       </tr>
       
       
       <tr id="toc-row-46">
-        <th><a href="#slide46">Thanks!</a></th>
+        <th><a href="#slide46">-</a></th>
         <td><a href="#slide46">46</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-47">
+        <th><a href="#slide47">-</a></th>
+        <td><a href="#slide47">47</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-48">
+        <th><a href="#slide48">Challenge</a></th>
+        <td><a href="#slide48">48</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-49">
+        <th><a href="#slide49">-</a></th>
+        <td><a href="#slide49">49</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-50">
+        <th><a href="#slide50">-</a></th>
+        <td><a href="#slide50">50</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-51">
+        <th><a href="#slide51">Further Reading</a></th>
+        <td><a href="#slide51">51</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-52">
+        <th><a href="#slide52">Thanks!</a></th>
+        <td><a href="#slide52">52</a></td>
       </tr>
       
       
