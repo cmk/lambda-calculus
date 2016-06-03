@@ -1416,6 +1416,230 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
       
       <!-- slide source: slides.md -->
       <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>The Y combinator</h1></header>
+            
+            
+            <section><p>The most famous combinator is probably Curry's Y (Sage bird) combinator: 
+$$
+$$
+<center>
+𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))
+</center></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              39/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>Y satisfies a fixed-point combinator equation. Y𝑎 reduces to:</p>
+<p>𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝑎</p>
+<p>(𝜆𝑥.(𝑎(𝑥𝑥)))𝜆𝑥.(𝑎(𝑥𝑥))</p>
+<p>𝑎(𝜆𝑥.(𝑎(𝑥𝑥))𝜆𝑥.(𝑎(𝑥𝑥)))</p>
+<p>𝑎(𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝑎)</p>
+<p>$$
+$$
+Hence Y𝑎=𝑎(Y𝑎). </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              40/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>Applied to a lambda function with one variable the Y combinator usually does not terminate. </p>
+<p>For example Y𝜆𝑎.𝑎 reduces to the Mockingbird combinator $\Omega$:</p>
+<p>𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝜆𝑎.𝑎</p>
+<p>𝜆𝑥.(𝜆𝑎.𝑎(𝑥𝑥))𝜆𝑥.(𝜆𝑎.𝑎(𝑥𝑥))</p>
+<p>𝜆𝑥.(𝑥𝑥)𝜆𝑥.(𝑥𝑥)</p>
+<p>𝜆𝑥.(𝑥𝑥)𝜆𝑥.(𝑥𝑥)</p>
+<p>...</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              41/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>More interesting results are obtained by applying the Y combinator to functions of two or more variables. The second variable may be used as a counter, or index. 
+$$
+$$
+The resulting function behaves like a while or a for loop in an imperative language.
+$$
+$$
+Y can be used to allow an expression to contain a reference to itself and reduce on itself permitting recursion and looping logic. </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              42/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Challenge</h1></header>
+            
+            
+            <section><p>For fun try and prove that the Y-combinator can be expressed in terms of the S and K combinators: </p>
+<p><center>
+Y=SSK(S(K(SS(S(SSK))))K)
+</center></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              43/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_notes">
+          <div class="inner">
+            
+            
+            <section><p>It's easy to think that lambda calculus is not much more than a bizarre, impractical form of abstract math, but it is absolutely foundational to programming.
+$$
+$$
+It provides a theoretical basis for functional programming as well as a rich set of simple, practical abstractions. 
+$$
+$$
+Good abstractions are hard to come by, so the plain but powerful lambda is an indispensable tool to the programmer.</p>
+<p class="notes">there is often an inverse relationship between simplicity and ease</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              44/52
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
@@ -1445,7 +1669,7 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
             </aside>
             
             <aside class="page_number">
-              39/52
+              45/52
             </aside>
 
           </footer>
@@ -1482,7 +1706,7 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
             </aside>
             
             <aside class="page_number">
-              40/52
+              46/52
             </aside>
 
           </footer>
@@ -1518,7 +1742,7 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
             </aside>
             
             <aside class="page_number">
-              41/52
+              47/52
             </aside>
 
           </footer>
@@ -1556,7 +1780,7 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
             </aside>
             
             <aside class="page_number">
-              42/52
+              48/52
             </aside>
 
           </footer>
@@ -1595,230 +1819,6 @@ All operations in lambda calculus are expressed in the SKI combinator calculus a
             </aside>
             
             <aside class="page_number">
-              43/52
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>The Y combinator</h1></header>
-            
-            
-            <section><p>The most famous combinator is probably Curry's Y (Sage bird) combinator: 
-$$
-$$
-<center>
-𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))
-</center></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              44/52
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-            <section><p>Y satisfies a fixed-point combinator equation. Y𝑎 reduces to:</p>
-<p>𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝑎</p>
-<p>(𝜆𝑥.(𝑎(𝑥𝑥)))𝜆𝑥.(𝑎(𝑥𝑥))</p>
-<p>𝑎(𝜆𝑥.(𝑎(𝑥𝑥))𝜆𝑥.(𝑎(𝑥𝑥)))</p>
-<p>𝑎(𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝑎)</p>
-<p>$$
-$$
-Hence Y𝑎=𝑎(Y𝑎). </p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              45/52
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-            <section><p>Applied to a lambda function with one variable the Y combinator usually does not terminate. </p>
-<p>For example Y𝜆𝑎.𝑎 reduces to the Mockingbird combinator $\Omega$:</p>
-<p>𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝜆𝑎.𝑎</p>
-<p>𝜆𝑥.(𝜆𝑎.𝑎(𝑥𝑥))𝜆𝑥.(𝜆𝑎.𝑎(𝑥𝑥))</p>
-<p>𝜆𝑥.(𝑥𝑥)𝜆𝑥.(𝑥𝑥)</p>
-<p>𝜆𝑥.(𝑥𝑥)𝜆𝑥.(𝑥𝑥)</p>
-<p>...</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              46/52
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-            <section><p>More interesting results are obtained by applying the Y combinator to functions of two or more variables. The second variable may be used as a counter, or index. 
-$$
-$$
-The resulting function behaves like a while or a for loop in an imperative language.
-$$
-$$
-Y can be used to allow an expression to contain a reference to itself and reduce on itself permitting recursion and looping logic. </p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              47/52
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Challenge</h1></header>
-            
-            
-            <section><p>For fun try and prove that the Y-combinator can be expressed in terms of the S and K combinators: </p>
-<p><center>
-Y=SSK(S(K(SS(S(SSK))))K)
-</center></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              48/52
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_notes">
-          <div class="inner">
-            
-            
-            <section><p>It's easy to think that lambda calculus is not much more than a bizarre, impractical form of abstract math, but it is absolutely foundational to programming.
-$$
-$$
-It provides a theoretical basis for functional programming as well as a rich set of simple, practical abstractions. 
-$$
-$$
-Good abstractions are hard to come by, so the plain but powerful lambda is an indispensable tool to the programmer.</p>
-<p class="notes">there is often an inverse relationship between simplicity and ease</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
               49/52
             </aside>
 
@@ -1831,14 +1831,15 @@ Good abstractions are hard to come by, so the plain but powerful lambda is an in
         <div class="slide">
           <div class="inner">
             
+            <header><h1>Further Reading</h1></header>
             
-            <section><p><img src="img/dijkstra.jpg" height="300">
-$$
-$$
-"Computer science is no more about computers than astronomy is about telescopes." </p>
-<ul>
-<li>Edsger Dijkstra </li>
-</ul></section>
+            
+            <section><p><img src="img/refs1.png" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
+<img src="img/refs2.png" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
+<img src="img/refs3.jpg" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
+<img src="img/refs4.png" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
+<img src="img/refs5.jpg" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
+<p style="clear: both;"></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1868,15 +1869,14 @@ $$
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Further Reading</h1></header>
             
-            
-            <section><p><img src="img/refs1.png" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
-<img src="img/refs2.png" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
-<img src="img/refs3.jpg" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
-<img src="img/refs4.png" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
-<img src="img/refs5.jpg" height="200" width="150" style="float: left;  margin-right: 1%; margin-bottom: 0.5em;">
-<p style="clear: both;"></p></section>
+            <section><p><img src="img/dijkstra.jpg" height="300">
+$$
+$$
+"Computer science is no more about computers than astronomy is about telescopes." </p>
+<ul>
+<li>Edsger Dijkstra </li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -2169,7 +2169,7 @@ $$
       
       
       <tr id="toc-row-39">
-        <th><a href="#slide39">Application: Thrush Combinator</a></th>
+        <th><a href="#slide39">The Y combinator</a></th>
         <td><a href="#slide39">39</a></td>
       </tr>
       
@@ -2193,19 +2193,19 @@ $$
       
       
       <tr id="toc-row-43">
-        <th><a href="#slide43">-</a></th>
+        <th><a href="#slide43">Challenge</a></th>
         <td><a href="#slide43">43</a></td>
       </tr>
       
       
       <tr id="toc-row-44">
-        <th><a href="#slide44">The Y combinator</a></th>
+        <th><a href="#slide44">-</a></th>
         <td><a href="#slide44">44</a></td>
       </tr>
       
       
       <tr id="toc-row-45">
-        <th><a href="#slide45">-</a></th>
+        <th><a href="#slide45">Application: Thrush Combinator</a></th>
         <td><a href="#slide45">45</a></td>
       </tr>
       
@@ -2223,7 +2223,7 @@ $$
       
       
       <tr id="toc-row-48">
-        <th><a href="#slide48">Challenge</a></th>
+        <th><a href="#slide48">-</a></th>
         <td><a href="#slide48">48</a></td>
       </tr>
       
@@ -2235,13 +2235,13 @@ $$
       
       
       <tr id="toc-row-50">
-        <th><a href="#slide50">-</a></th>
+        <th><a href="#slide50">Further Reading</a></th>
         <td><a href="#slide50">50</a></td>
       </tr>
       
       
       <tr id="toc-row-51">
-        <th><a href="#slide51">Further Reading</a></th>
+        <th><a href="#slide51">-</a></th>
         <td><a href="#slide51">51</a></td>
       </tr>
       
