@@ -95,7 +95,7 @@
             </aside>
             
             <aside class="page_number">
-              1/39
+              1/46
             </aside>
 
           </footer>
@@ -108,8 +108,10 @@
           <div class="inner">
             
             
-            <section><p><img src="img/lambda.png" height="42" width="42"></p>
-<p>The 𝜆 calculus was introduced in the 1930s by Alonzo Church as a way of formalizing the concept of effective computability. </p></section>
+            <section><p><img src="img/church.jpg" height="300">
+$$
+$$
+The 𝜆 calculus was introduced in the 1930s by Alonzo Church as a way of formalizing the concept of effective computability. </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -127,7 +129,7 @@
             </aside>
             
             <aside class="page_number">
-              2/39
+              2/46
             </aside>
 
           </footer>
@@ -161,7 +163,7 @@ It is the smallest such universal programming language in the world (up to equiv
             </aside>
             
             <aside class="page_number">
-              3/39
+              3/46
             </aside>
 
           </footer>
@@ -199,7 +201,7 @@ It is a theory more related to software than to hardware.</p>
             </aside>
             
             <aside class="page_number">
-              4/39
+              4/46
             </aside>
 
           </footer>
@@ -217,8 +219,8 @@ It is a theory more related to software than to hardware.</p>
             <section><p>The 𝜆 calculus consists of a single transformation rule (variable substitution)
 and a single function definition scheme: 𝜆𝑥.𝑥</p>
 <ul>
-<li>E𝑥actly one input &amp; one output</li>
-<li>Pure E𝑥pressions</li>
+<li>Exactly one input &amp; one output</li>
+<li>Pure expressions</li>
 <li>Less options =  more power</li>
 </ul></section>
             
@@ -238,39 +240,7 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             </aside>
             
             <aside class="page_number">
-              5/39
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-            <section><p><img src="img/pure.png" height="42" width="42">
-<img src="img/impure.png" height="42" width="42"></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              6/39
+              5/46
             </aside>
 
           </footer>
@@ -301,7 +271,7 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             </aside>
             
             <aside class="page_number">
-              7/39
+              6/46
             </aside>
 
           </footer>
@@ -316,11 +286,13 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             <header><h1>The Grammar</h1></header>
             
             
-            <section><p>The central concept in 𝜆 calculus is the “e𝑥pression”, defined recursively as follows:</p>
-<p><e𝑥pression> := <name> | <function> | <application>
-<function> := 𝜆 <name>.<e𝑥pression>
-<application> := <e𝑥pression><e𝑥pression></p>
-<p>The only keywords used in the language are 𝜆 and the dot.</p></section>
+            <section><p>The central concept in 𝜆 calculus is the “expression”, defined recursively as follows:</p>
+<p><code>expression</code> := <code>name | function | application</code></p>
+<p><code>function</code> := 𝜆 <code>name.expression</code></p>
+<p><code>application</code> := <code>expression expression</code></p>
+<p>$$
+$$
+The only keywords used in the language are 𝜆 and the dot.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -338,7 +310,7 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             </aside>
             
             <aside class="page_number">
-              8/39
+              7/46
             </aside>
 
           </footer>
@@ -351,9 +323,13 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
           <div class="inner">
             
             
-            <section><p>Functions consist of two parts: the head and the body. </p>
-<p>The head of the function is a 𝜆 (lambda) followed by a variable name. </p>
-<p>The body of the function is another e𝑥pression. </p></section>
+            <section><p>Functions consist of two parts: the head and the body. 
+$$
+$$
+The head of the function is a 𝜆 (lambda) followed by a variable name. 
+$$
+$$
+The body of the function is another expression. </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -371,7 +347,7 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             </aside>
             
             <aside class="page_number">
-              9/39
+              8/46
             </aside>
 
           </footer>
@@ -384,9 +360,13 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
           <div class="inner">
             
             
-            <section><p>So, a simple function might look like this: 𝜆𝑥.𝑥</p>
-<p>The variable named in the head is the parameter and binds all instances of that same variable in the body of the function. </p>
-<p>That means, when we apply this function to an argument, each 𝑥 in the body of the function will have the value of that argument. </p></section>
+            <section><p>The simplest function is the identity I = 𝜆𝑥.𝑥
+$$
+$$
+The variable named in the head is the parameter and binds all instances of that same variable in the body of the function. 
+$$
+$$
+That means, when we apply this function to an argument, each 𝑥 in the body of the function will have the value of that argument. </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -404,7 +384,7 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             </aside>
             
             <aside class="page_number">
-              10/39
+              9/46
             </aside>
 
           </footer>
@@ -419,7 +399,7 @@ and a single function definition scheme: 𝜆𝑥.𝑥</p>
             <header><h1>$\beta$-reduction</h1></header>
             
             
-            <section><p>When we apply a function to an argument, we substitute the input e𝑥pression for all instances of bound variables within the body of the abstraction. 
+            <section><p>When we apply a function to an argument, we substitute the input expression for all instances of bound variables within the body of the abstraction. 
 $$
 $$
 You also eliminate the head of the abstraction, since its only purpose was to bind a variable. This process is called $\beta$-reduction .</p></section>
@@ -440,7 +420,7 @@ You also eliminate the head of the abstraction, since its only purpose was to bi
             </aside>
             
             <aside class="page_number">
-              11/39
+              10/46
             </aside>
 
           </footer>
@@ -453,7 +433,7 @@ You also eliminate the head of the abstraction, since its only purpose was to bi
           <div class="inner">
             
             
-            <section><p>Applications in the lambda calculus are left associative, and e𝑥pressions can optionally be surrounded with parenthesis for clarity.
+            <section><p>Applications in the lambda calculus are left associative, and expressions can optionally be surrounded with parenthesis for clarity.
 $$
 $$
 (𝜆𝑥.𝑥)(𝜆𝑦.𝑦)𝑧 can therfore be rewritten as ((𝜆𝑥.𝑥)(𝜆𝑦.𝑦))𝑧 </p></section>
@@ -474,7 +454,7 @@ $$
             </aside>
             
             <aside class="page_number">
-              12/39
+              11/46
             </aside>
 
           </footer>
@@ -488,10 +468,10 @@ $$
             
             
             <section><p>Reducing this gives us:</p>
-<p>((𝜆𝑥.𝑥)(𝜆𝑦.𝑦))𝑧<br />
-(𝜆𝑦.𝑦)𝑧 
-𝑧</p>
-<p>We go until there are either no lambdas left to apply, or no e𝑥pressions left to apply them to.</p></section>
+<p>((𝜆𝑥.𝑥)(𝜆𝑦.𝑦))𝑧  </p>
+<p>(𝜆𝑦.𝑦)𝑧 </p>
+<p>𝑧</p>
+<p>We go until there are either no lambdas left to apply, or no expressions left to apply them to.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -509,7 +489,7 @@ $$
             </aside>
             
             <aside class="page_number">
-              13/39
+              12/46
             </aside>
 
           </footer>
@@ -524,10 +504,10 @@ $$
             <header><h1>Bound and free variables</h1></header>
             
             
-            <section><p>Sometimes the body e𝑥pression has variables that are not named in the head. We call those variables free variables. 
+            <section><p>Sometimes the body expression has variables that are not named in the head. We call those variables free variables. 
 $$
 $$
-In the e𝑥pression 𝜆𝑥.𝑥𝑦 the 𝑥 in the body is a bound variable because it is named in the head of the function, while the 𝑦 is a free variable because it is not. </p></section>
+In the expression 𝜆𝑥.𝑥𝑦 the 𝑥 in the body is a bound variable because it is named in the head of the function, while the 𝑦 is a free variable because it is not. </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -545,7 +525,7 @@ In the e𝑥pression 𝜆𝑥.𝑥𝑦 the 𝑥 in the body is a bound variable 
             </aside>
             
             <aside class="page_number">
-              14/39
+              13/46
             </aside>
 
           </footer>
@@ -579,7 +559,7 @@ That whole abstraction can be applied to an argument, 𝑧, like this: (𝜆𝑥
             </aside>
             
             <aside class="page_number">
-              15/39
+              14/46
             </aside>
 
           </footer>
@@ -594,7 +574,7 @@ That whole abstraction can be applied to an argument, 𝑧, like this: (𝜆𝑥
             <header><h1>$\alpha$ equivalence</h1></header>
             
             
-            <section><p>In the e𝑥pression 𝜆𝑥.𝑥, the variable 𝑥 here is not semantically meaningful e𝑥cept in its role in that single e𝑥pression. 
+            <section><p>In the expression 𝜆𝑥.𝑥, the variable 𝑥 here is not semantically meaningful except in its role in that single expression. 
 $$
 $$
 Because of this, there’s a form of equivalence between lambda terms called alpha equivalence.</p></section>
@@ -615,7 +595,7 @@ Because of this, there’s a form of equivalence between lambda terms called alp
             </aside>
             
             <aside class="page_number">
-              16/39
+              15/46
             </aside>
 
           </footer>
@@ -628,13 +608,9 @@ Because of this, there’s a form of equivalence between lambda terms called alp
           <div class="inner">
             
             
-            <section><p>Due to $\alpha$-equivalence, you sometimes see e𝑥pressions in lambda calculus literature such as:
-$$
-$$
-(𝜆𝑥𝑦.𝑥𝑥𝑦)(𝜆𝑥.𝑥𝑦)(𝜆𝑥.𝑥𝑧)
-$$
-$$
-To help make the reduction easier to read we can use different variables in each abstraction.</p></section>
+            <section><p>Due to alpha equivalence, you sometimes see expressions in lambda calculus literature such as:</p>
+<p>(𝜆𝑥𝑦.𝑥𝑥𝑦)(𝜆𝑥.𝑥𝑦)(𝜆𝑥.𝑥𝑧)</p>
+<p>To help make the reduction easier to read we can use different variables in each abstraction.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -652,7 +628,7 @@ To help make the reduction easier to read we can use different variables in each
             </aside>
             
             <aside class="page_number">
-              17/39
+              16/46
             </aside>
 
           </footer>
@@ -688,7 +664,7 @@ This formulation was originally discovered by Moses Schönfinkel in the 1920s b
             </aside>
             
             <aside class="page_number">
-              18/39
+              17/46
             </aside>
 
           </footer>
@@ -722,7 +698,7 @@ When you apply the first argument, you’re binding 𝑥, eliminating the outer 
             </aside>
             
             <aside class="page_number">
-              19/39
+              18/46
             </aside>
 
           </footer>
@@ -760,7 +736,7 @@ When you apply the first argument, you’re binding 𝑥, eliminating the outer 
             </aside>
             
             <aside class="page_number">
-              20/39
+              19/46
             </aside>
 
           </footer>
@@ -775,10 +751,10 @@ When you apply the first argument, you’re binding 𝑥, eliminating the outer 
             <header><h1>$\beta$ normal form</h1></header>
             
             
-            <section><p>$\beta$ normal form refers to a fully reduced (i.e. all available lambdas are applied to available arguments) 
+            <section><p>Beta normal form refers to a fully reduced (i.e. all available lambdas are applied to available arguments) 
 $$
 $$
-This corresponds to a fully evaluated e𝑥pression, or, in programming, a fully e𝑥ecuted program. </p></section>
+This corresponds to a fully evaluated expression, or, in programming, a fully e𝑥ecuted program. </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -796,7 +772,7 @@ This corresponds to a fully evaluated e𝑥pression, or, in programming, a fully
             </aside>
             
             <aside class="page_number">
-              21/39
+              20/46
             </aside>
 
           </footer>
@@ -811,7 +787,7 @@ This corresponds to a fully evaluated e𝑥pression, or, in programming, a fully
             <header><h1>Challenge Question</h1></header>
             
             
-            <section><p>Evaluate (that is, $\beta$-reduce ) each of the following e𝑥pressions to normal form. </p>
+            <section><p>Evaluate (that is, beta reduce) each of the following expressions to normal form. </p>
 <p>1) (𝜆𝑧.𝑧)(𝜆𝑧.𝑧𝑧)(𝜆𝑧.𝑧𝑦)</p>
 <p>2) (𝜆𝑥.𝜆𝑦.𝑥𝑦𝑦)(𝜆𝑦.𝑦)𝑦</p>
 <p>3) (𝜆𝑎.𝑎𝑎)(𝜆𝑏.𝑏𝑎)𝑐</p>
@@ -833,7 +809,7 @@ This corresponds to a fully evaluated e𝑥pression, or, in programming, a fully
             </aside>
             
             <aside class="page_number">
-              22/39
+              21/46
             </aside>
 
           </footer>
@@ -872,7 +848,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              23/39
+              22/46
             </aside>
 
           </footer>
@@ -908,7 +884,41 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              24/39
+              23/46
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>The $\Omega$ combinator is the canonical looping term in the lambda calculus. 
+$$
+$$
+Static type systems (e.g. Haskell, Scala) will reject this term from being well-formed, so it is a useful tool for compile-time testing.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/46
             </aside>
 
           </footer>
@@ -939,7 +949,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              25/39
+              25/46
             </aside>
 
           </footer>
@@ -951,13 +961,13 @@ This matters in programming because terms that diverge won’t produce an answer
         <div class="slide">
           <div class="inner">
             
-            <header><h1>$\mathcal{N}$</h1></header>
+            <header><h1>Natural Numbers</h1></header>
             
             
-            <section><p>zero := 𝜆𝑎.𝜆𝑥.𝑥 </p>
-<p>one := 𝜆𝑎.𝜆𝑥.𝑎𝑥</p>
-<p>two := 𝜆𝑎.𝜆𝑥.𝑎𝑎𝑥</p>
-<p>succ := 𝜆𝑎.𝜆𝑏.𝜆𝑥.(𝑏(𝑎𝑏𝑥)) </p></section>
+            <section><p><code>zero</code> := 𝜆𝑎.𝜆𝑥.𝑥 </p>
+<p><code>one</code> := 𝜆𝑎.𝜆𝑥.𝑎𝑥</p>
+<p><code>two</code> := 𝜆𝑎.𝜆𝑥.𝑎𝑎𝑥</p>
+<p><code>succ</code> := 𝜆𝑎.𝜆𝑏.𝜆𝑥.(𝑏(𝑎𝑏𝑥)) </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -975,7 +985,43 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              26/39
+              26/46
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>For example, <code>succ one</code>  reduces to:</p>
+<p>𝜆𝑎.𝜆𝑏.𝜆𝑥.(𝑏(𝑎𝑏𝑥))(𝜆𝑎.𝜆𝑥.𝑎𝑥)</p>
+<p>𝜆𝑎𝑏𝑥.(𝑏(𝑎𝑏𝑥))(𝜆𝑎𝑥.𝑎𝑥)</p>
+<p>𝜆𝑏𝑥.𝑏((𝜆𝑎𝑥.𝑎𝑥)𝑏𝑥)</p>
+<p>𝜆𝑏𝑥.𝑏𝑏𝑥</p>
+<p>𝜆𝑎𝑥.𝑎𝑎𝑥</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/46
             </aside>
 
           </footer>
@@ -990,11 +1036,11 @@ This matters in programming because terms that diverge won’t produce an answer
             <header><h1>Boolean Algebra</h1></header>
             
             
-            <section><p>true :=  𝜆𝑥𝑦.𝑥</p>
-<p>false := 𝜆𝑥𝑦.𝑦</p>
-<p>and := 𝜆𝑎𝑏.𝑎𝑏𝑎</p>
-<p>or := 𝜆𝑎𝑏.𝑎𝑎𝑏</p>
-<p>if := 𝜆𝑎𝑏𝑐.𝑎𝑏𝑐 </p></section>
+            <section><p><code>true</code> :=  𝜆𝑥𝑦.𝑥</p>
+<p><code>false</code> := 𝜆𝑥𝑦.𝑦</p>
+<p><code>and</code> := 𝜆𝑎𝑏.𝑎𝑏𝑎</p>
+<p><code>or</code> := 𝜆𝑎𝑏.𝑎𝑎𝑏</p>
+<p><code>if</code> := 𝜆𝑎𝑏𝑐.𝑎𝑏𝑐 </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1012,7 +1058,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              27/39
+              28/46
             </aside>
 
           </footer>
@@ -1025,7 +1071,7 @@ This matters in programming because terms that diverge won’t produce an answer
           <div class="inner">
             
             
-            <section><p>For example, <code>and true false</code> $\beta$-reduces to:</p>
+            <section><p>For example, <code>and true false</code> reduces to:</p>
 <p>𝜆𝑎𝑏.𝑎𝑏𝑎(𝜆𝑥𝑦.𝑥)(𝜆𝑥𝑦.𝑦) </p>
 <p>𝜆𝑥𝑦.𝑥(𝜆𝑥𝑦.𝑦)(𝜆𝑥𝑦.𝑥)</p>
 <p>𝜆𝑥𝑦.𝑦</p></section>
@@ -1046,7 +1092,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              28/39
+              29/46
             </aside>
 
           </footer>
@@ -1059,7 +1105,7 @@ This matters in programming because terms that diverge won’t produce an answer
           <div class="inner">
             
             
-            <section><p><code>if false false true</code> $\beta$-reduces to:</p>
+            <section><p><code>if false false true</code> reduces to:</p>
 <p>𝜆𝑎𝑏𝑐.𝑎𝑏𝑐(𝜆𝑥𝑦.𝑦)(𝜆𝑥𝑦.𝑦)(𝜆𝑥𝑦.𝑥)</p>
 <p>𝜆𝑥𝑦.𝑦(𝜆𝑥𝑦.𝑦)(𝜆𝑥𝑦.𝑥)</p>
 <p>𝜆𝑥𝑦.𝑥</p></section>
@@ -1080,7 +1126,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              29/39
+              30/46
             </aside>
 
           </footer>
@@ -1089,16 +1135,16 @@ This matters in programming because terms that diverge won’t produce an answer
       
       <!-- slide source: slides.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_notes">
           <div class="inner">
             
             <header><h1>Tuples and Lists</h1></header>
             
             
-            <section><p>first := 𝜆𝑎.𝑎(𝜆𝑥𝑦.𝑥) </p>
-<p>second := 𝜆𝑎.𝑎(𝜆𝑥𝑦.𝑦) </p>
-<p>pair := 𝜆𝑎.𝑎(𝑚𝑛)</p>
-<p>.note: note the free variables in pair</p></section>
+            <section><p><code>first</code> := 𝜆𝑎.𝑎(𝜆𝑥𝑦.𝑥) </p>
+<p><code>second</code> := 𝜆𝑎.𝑎(𝜆𝑥𝑦.𝑦) </p>
+<p><code>pair</code> := 𝜆𝑎.𝑎(𝑚𝑛)</p>
+<p class="notes">note the free variables in pair</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1116,7 +1162,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              30/39
+              31/46
             </aside>
 
           </footer>
@@ -1129,7 +1175,7 @@ This matters in programming because terms that diverge won’t produce an answer
           <div class="inner">
             
             
-            <section><p>For example, <code>first(pair(𝑚𝑛))</code> $\beta$-reduces to:</p>
+            <section><p>For example, <code>first(pair(𝑚𝑛))</code> reduces to:</p>
 <p>(𝜆𝑎.𝑎(𝜆𝑥𝑦.𝑥))(𝜆𝑎.𝑎𝑚𝑛) </p>
 <p>(𝜆𝑥𝑦.𝑥)𝑚𝑛</p>
 <p>𝑚</p></section>
@@ -1150,7 +1196,7 @@ This matters in programming because terms that diverge won’t produce an answer
             </aside>
             
             <aside class="page_number">
-              31/39
+              32/46
             </aside>
 
           </footer>
@@ -1165,7 +1211,7 @@ This matters in programming because terms that diverge won’t produce an answer
             <header><h1>Combinators</h1></header>
             
             
-            <section><p>A combinator is a lambda term with no free variables. 
+            <section><p>A <a href="https://en.wikipedia.org/wiki/Combinatory_logic">combinator</a> is a lambda term with no free variables. 
 $$
 $$
 Combinators, as the name suggests, serve only to combine the arguments it is given.</p></section>
@@ -1186,7 +1232,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              32/39
+              33/46
             </aside>
 
           </footer>
@@ -1202,12 +1248,10 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             
             
             <section><p>What do these combinators do?</p>
-<ul>
-<li>𝜆𝑥.𝑥</li>
-<li>𝜆𝑥𝑦.𝑥</li>
-<li>𝜆𝑥𝑦.𝑥𝑦</li>
-<li>𝜆𝑥𝑦𝑧.𝑥𝑧𝑦</li>
-</ul>
+<p>1) 𝜆𝑥.𝑥</p>
+<p>2) 𝜆𝑥𝑦.𝑥</p>
+<p>3) 𝜆𝑥𝑦.𝑥𝑦</p>
+<p>4) 𝜆𝑥𝑦𝑧.𝑥𝑧𝑦</p>
 <p class="notes">id, const, apply, flip</p></section>
             
           </div>
@@ -1226,7 +1270,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              33/39
+              34/46
             </aside>
 
           </footer>
@@ -1241,7 +1285,8 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             <header><h1>SKI Combinators</h1></header>
             
             
-            <section><p>S := 𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧)</p>
+            <section><p>The Starling, Kestrel, and Identity combinators are defined as:</p>
+<p>S := 𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧)</p>
 <p>K := 𝜆𝑥𝑦.𝑥</p>
 <p>I := 𝜆𝑥.𝑥</p></section>
             
@@ -1261,7 +1306,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              34/39
+              35/46
             </aside>
 
           </footer>
@@ -1274,8 +1319,41 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
           <div class="inner">
             
             
-            <section><p>Rather remarkably Moses Schönfinkel showed that all closed lambda expression can be expressed in terms of the S and K combinators including the I combinator. </p>
-<p>For example one can easily show that SKK reduces to I:</p>
+            <section><p>Remarkably, Schönfinkel also showed that all closed lambda expressions can be expressed in terms of the S, K, and I combinators. 
+$$
+$$
+All operations in lambda calculus are expressed in the SKI combinator calculus as binary trees whose leaves are one of the three symbols S, K, and I.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              36/46
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>For example, one can easily show that SKK reduces to I:</p>
 <p>(𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧))(𝜆𝑥𝑦.𝑥)(𝜆𝑥𝑦.𝑥)</p>
 <p>(𝜆𝑦𝑧.(𝜆𝑥𝑦.𝑥)𝑧(𝑦𝑧))(𝜆𝑥𝑦.𝑥)</p>
 <p>𝜆𝑧.(𝜆𝑥𝑦.𝑥)𝑧((𝜆𝑥𝑦.𝑥)𝑧)</p>
@@ -1298,7 +1376,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              35/39
+              37/46
             </aside>
 
           </footer>
@@ -1311,9 +1389,12 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
           <div class="inner">
             
             
-            <section><p>Probably the most famous combinator is Curry's Y combinator: 𝜆𝑎.(𝜆𝑥.(𝑎(𝑥𝑥))𝜆𝑥.(𝑎(𝑥𝑥)))</p>
-<p>Within an untyped lambda calculus, Y can be used to allow an expression to contain a reference to itself and reduce on itself permitting recursion and looping logic: Y𝑎=𝑎(Y𝑎)</p>
-<p>The well-known startup accelerator <a href="https://www.ycombinator.com/">Y-combinator</a> is a reference to this functionality.</p></section>
+            <section><p>However the most famous combinator is probably Curry's Y (Sage bird) combinator: 
+$$
+$$
+<center>
+𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))
+</center></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1331,7 +1412,119 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              36/39
+              38/46
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>Y satisfies a fixed-point combinator equation. Y𝑎 reduces to:</p>
+<p>𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝑎</p>
+<p>(𝜆𝑥.(𝑎(𝑥𝑥)))𝜆𝑥.(𝑎(𝑥𝑥))</p>
+<p>𝑎(𝜆𝑥.(𝑎(𝑥𝑥))𝜆𝑥.(𝑎(𝑥𝑥)))</p>
+<p>𝑎(𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝑎)</p>
+<p>$$
+$$
+Hence Y𝑎=𝑎(Y𝑎). </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              39/46
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>Applied to a lambda function with one variable the Y combinator usually does not terminate. </p>
+<p>For example Y𝜆𝑎.𝑎 reduces to $\Omega$:</p>
+<p>𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))𝜆𝑎.𝑎</p>
+<p>𝜆𝑥.(𝜆𝑎.𝑎(𝑥𝑥))𝜆𝑥.(𝜆𝑎.𝑎(𝑥𝑥))</p>
+<p>𝜆𝑥.(𝑥𝑥)𝜆𝑥.(𝑥𝑥)</p>
+<p>𝜆𝑥.(𝑥𝑥)𝜆𝑥.(𝑥𝑥)</p>
+<p>...</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              40/46
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>More interesting results are obtained by applying the Y combinator to functions of two or more variables. The second variable may be used as a counter, or index. 
+$$
+$$
+The resulting function behaves like a while or a for loop in an imperative language.
+$$
+$$
+Y can be used to allow an expression to contain a reference to itself and reduce on itself permitting recursion and looping logic. </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              41/46
             </aside>
 
           </footer>
@@ -1346,7 +1539,10 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             <header><h1>Challenge</h1></header>
             
             
-            <section><p>For fun try and prove that the Y-combinator can be expressed in terms of the S and K combinators: Y=SSK(S(K(SS(S(SSK))))K)</p></section>
+            <section><p>For fun try and prove that the Y-combinator can be expressed in terms of the S and K combinators: </p>
+<p><center>
+Y=SSK(S(K(SS(S(SSK))))K)
+</center></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1364,7 +1560,82 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              37/39
+              42/46
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_notes">
+          <div class="inner">
+            
+            
+            <section><p>It's easy to think that lambda calculus is not much more than a bizarre, impractical form of abstract math, but it is absolutely foundational to programming.
+$$
+$$
+It provides a theoretical basis for functional programming as well as a rich set of simple, practical abstractions. 
+$$
+$$
+Good abstractions are hard to come by, so the plain but powerful lambda is an indispensable tool to the programmer.</p>
+<p class="notes">there is often an inverse relationship between simplicity and ease</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              43/46
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><img src="img/dijkstra.jpg" height="300">
+$$
+$$
+"Computer science is no more about computers than astronomy is about telescopes." </p>
+<ul>
+<li>Edsger Dijkstra </li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              44/46
             </aside>
 
           </footer>
@@ -1402,7 +1673,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              38/39
+              45/46
             </aside>
 
           </footer>
@@ -1433,7 +1704,7 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
             </aside>
             
             <aside class="page_number">
-              39/39
+              46/46
             </aside>
 
           </footer>
@@ -1479,19 +1750,19 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">-</a></th>
+        <th><a href="#slide6">Elements of the 𝜆 Calculus</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Elements of the 𝜆 Calculus</a></th>
+        <th><a href="#slide7">The Grammar</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">The Grammar</a></th>
+        <th><a href="#slide8">-</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
@@ -1503,13 +1774,13 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">-</a></th>
+        <th><a href="#slide10">$\beta$-reduction</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">$\beta$-reduction</a></th>
+        <th><a href="#slide11">-</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
@@ -1521,67 +1792,67 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">-</a></th>
+        <th><a href="#slide13">Bound and free variables</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">Bound and free variables</a></th>
+        <th><a href="#slide14">-</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">-</a></th>
+        <th><a href="#slide15">$\alpha$ equivalence</a></th>
         <td><a href="#slide15">15</a></td>
       </tr>
       
       
       <tr id="toc-row-16">
-        <th><a href="#slide16">$\alpha$ equivalence</a></th>
+        <th><a href="#slide16">-</a></th>
         <td><a href="#slide16">16</a></td>
       </tr>
       
       
       <tr id="toc-row-17">
-        <th><a href="#slide17">-</a></th>
+        <th><a href="#slide17">Currying</a></th>
         <td><a href="#slide17">17</a></td>
       </tr>
       
       
       <tr id="toc-row-18">
-        <th><a href="#slide18">Currying</a></th>
+        <th><a href="#slide18">-</a></th>
         <td><a href="#slide18">18</a></td>
       </tr>
       
       
       <tr id="toc-row-19">
-        <th><a href="#slide19">-</a></th>
+        <th><a href="#slide19">E𝑥ample: $\beta$-reduction</a></th>
         <td><a href="#slide19">19</a></td>
       </tr>
       
       
       <tr id="toc-row-20">
-        <th><a href="#slide20">E𝑥ample: $\beta$-reduction</a></th>
+        <th><a href="#slide20">$\beta$ normal form</a></th>
         <td><a href="#slide20">20</a></td>
       </tr>
       
       
       <tr id="toc-row-21">
-        <th><a href="#slide21">$\beta$ normal form</a></th>
+        <th><a href="#slide21">Challenge Question</a></th>
         <td><a href="#slide21">21</a></td>
       </tr>
       
       
       <tr id="toc-row-22">
-        <th><a href="#slide22">Challenge Question</a></th>
+        <th><a href="#slide22">Divergence</a></th>
         <td><a href="#slide22">22</a></td>
       </tr>
       
       
       <tr id="toc-row-23">
-        <th><a href="#slide23">Divergence</a></th>
+        <th><a href="#slide23">-</a></th>
         <td><a href="#slide23">23</a></td>
       </tr>
       
@@ -1599,19 +1870,19 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
       
       
       <tr id="toc-row-26">
-        <th><a href="#slide26">$\mathcal{N}$</a></th>
+        <th><a href="#slide26">Natural Numbers</a></th>
         <td><a href="#slide26">26</a></td>
       </tr>
       
       
       <tr id="toc-row-27">
-        <th><a href="#slide27">Boolean Algebra</a></th>
+        <th><a href="#slide27">-</a></th>
         <td><a href="#slide27">27</a></td>
       </tr>
       
       
       <tr id="toc-row-28">
-        <th><a href="#slide28">-</a></th>
+        <th><a href="#slide28">Boolean Algebra</a></th>
         <td><a href="#slide28">28</a></td>
       </tr>
       
@@ -1623,37 +1894,37 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
       
       
       <tr id="toc-row-30">
-        <th><a href="#slide30">Tuples and Lists</a></th>
+        <th><a href="#slide30">-</a></th>
         <td><a href="#slide30">30</a></td>
       </tr>
       
       
       <tr id="toc-row-31">
-        <th><a href="#slide31">-</a></th>
+        <th><a href="#slide31">Tuples and Lists</a></th>
         <td><a href="#slide31">31</a></td>
       </tr>
       
       
       <tr id="toc-row-32">
-        <th><a href="#slide32">Combinators</a></th>
+        <th><a href="#slide32">-</a></th>
         <td><a href="#slide32">32</a></td>
       </tr>
       
       
       <tr id="toc-row-33">
-        <th><a href="#slide33">Challenge Question:</a></th>
+        <th><a href="#slide33">Combinators</a></th>
         <td><a href="#slide33">33</a></td>
       </tr>
       
       
       <tr id="toc-row-34">
-        <th><a href="#slide34">SKI Combinators</a></th>
+        <th><a href="#slide34">Challenge Question:</a></th>
         <td><a href="#slide34">34</a></td>
       </tr>
       
       
       <tr id="toc-row-35">
-        <th><a href="#slide35">-</a></th>
+        <th><a href="#slide35">SKI Combinators</a></th>
         <td><a href="#slide35">35</a></td>
       </tr>
       
@@ -1665,20 +1936,62 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
       
       
       <tr id="toc-row-37">
-        <th><a href="#slide37">Challenge</a></th>
+        <th><a href="#slide37">-</a></th>
         <td><a href="#slide37">37</a></td>
       </tr>
       
       
       <tr id="toc-row-38">
-        <th><a href="#slide38">Further Reading</a></th>
+        <th><a href="#slide38">-</a></th>
         <td><a href="#slide38">38</a></td>
       </tr>
       
       
       <tr id="toc-row-39">
-        <th><a href="#slide39">Thanks!</a></th>
+        <th><a href="#slide39">-</a></th>
         <td><a href="#slide39">39</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-40">
+        <th><a href="#slide40">-</a></th>
+        <td><a href="#slide40">40</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-41">
+        <th><a href="#slide41">-</a></th>
+        <td><a href="#slide41">41</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-42">
+        <th><a href="#slide42">Challenge</a></th>
+        <td><a href="#slide42">42</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-43">
+        <th><a href="#slide43">-</a></th>
+        <td><a href="#slide43">43</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-44">
+        <th><a href="#slide44">-</a></th>
+        <td><a href="#slide44">44</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-45">
+        <th><a href="#slide45">Further Reading</a></th>
+        <td><a href="#slide45">45</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-46">
+        <th><a href="#slide46">Thanks!</a></th>
+        <td><a href="#slide46">46</a></td>
       </tr>
       
       
