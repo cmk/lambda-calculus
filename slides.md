@@ -231,10 +231,15 @@ This matters in programming because terms that diverge won’t produce an answer
 
 ---
 
-Here’s an example of a lambda term called the $\Omega$ combinator: 𝜆𝑥.𝑥𝑥
+Here’s an example of a lambda term called the $\Omega$ (mockingbird) combinator: 
+
+<center>
+𝜆𝑥.𝑥𝑥
+</center>
+
+---
 
 The $\Omega$ combinator diverges when applied to itself:
-
 
 (𝜆𝑥.𝑥𝑥)(𝜆𝑥.𝑥𝑥)
 
@@ -361,39 +366,32 @@ Combinators, as the name suggests, serve only to combine the arguments it is giv
 
 ---
 
+In his classic book [To Mock a Mockingbird](http://www.amazon.com/Mock-Mockingbird-Other-Logic-Puzzles/dp/0192801422), Raymond Smullyan teaches combinatory logic using the analogy of songbirds in a forest.
+$$
+$$
+The bird names have gone a long way in establishing a common vocabulary of programming idioms and techniques.
+
+---
+
+
 #Challenge Question: 
 
 What do these combinators do?
 
 
-1) 𝜆𝑥.𝑥
+1) 𝜆𝑥.𝑥  (Identity)
 
-2) 𝜆𝑥𝑦.𝑥
+2) 𝜆𝑥.𝑥𝑥 (Mockingbird) 
 
-3) 𝜆𝑥𝑦.𝑥𝑦
+3) 𝜆𝑥𝑦.𝑥 (Kestrel)
 
-4) 𝜆𝑥𝑦𝑧.𝑥𝑧𝑦
+4) 𝜆𝑥𝑦.𝑦𝑥 (Thrush) 
 
-
-.notes: id, const, apply, flip
-
----
-
-
-#SKI Combinators
-
-The Starling, Kestrel, and Identity combinators are defined as:
-
-S := 𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧)
-
-K := 𝜆𝑥𝑦.𝑥
-
-I := 𝜆𝑥.𝑥
-
+5) 𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧) (Starling)
 
 ---
 
-Remarkably, Schönfinkel also showed that all closed lambda expressions can be expressed in terms of the S, K, and I combinators. 
+Remarkably, Schönfinkel showed that all closed lambda expressions can be expressed in terms of the Starling and Kestrel and Identity combinators. 
 $$
 $$
 All operations in lambda calculus are expressed in the SKI combinator calculus as binary trees whose leaves are one of the three symbols S, K, and I.
@@ -414,7 +412,58 @@ For example, one can easily show that SKK reduces to I:
 
 ---
 
-However the most famous combinator is probably Curry's Y (Sage bird) combinator: 
+#Application: Thrush Combinator
+
+The following code is correct but difficult to read:
+
+    !scala
+    ((x: Int) => (x * x))((1 to 100).filter(_ % 2 != 0).foldLeft(0)(_+_))
+
+---
+
+    !scala
+    case class Thrush[A](x: A) {
+      def into[B](g: A => B): B = {
+        g(x)
+      }
+    }
+
+---
+
+    !scala
+    Thrush((1 to 10)
+      .filter(_ % 2 == 0)
+      .foldLeft(0)(_ + _))
+      .into(_ / 2)
+
+---
+
+    !scala
+
+    implicit def int2Thrush(x: Int) = Thrush(x)
+
+    (1 to 10)
+      .filter(_ % 2 == 0)
+      .foldLeft(0)(_ + _)
+      .into(_ / 2)
+
+---
+
+This comes in handy for designing expressive domain APIs and data pipelines:
+
+    !scala
+    accounts.filter(_ belongsTo "John S.")
+            .map(_.calculateInterest)
+            .filter(_ > threshold)
+            .foldLeft(0)(_ + _)
+            .into {x: Int =>
+              updateBooks journalize(Ledger.INTEREST, x)
+            }
+
+
+---
+
+The most famous combinator is probably Curry's Y (Sage bird) combinator: 
 $$
 $$
 <center>
