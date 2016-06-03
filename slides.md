@@ -414,10 +414,10 @@ For example, one can easily show that SKK reduces to I:
 
 #Application: Thrush Combinator
 
-The following code is correct but difficult to read:
+The following Scala code is correct but difficult to read:
 
     !scala
-    ((x: Int) => (x * x))((1 to 100).filter(_ % 2 != 0).foldLeft(0)(_+_))
+    ((x: Int) => (x / 2))((1 to 10).filter(_ % 2 == 0).foldLeft(0)(_+_))
 
 ---
 
@@ -454,7 +454,6 @@ This comes in handy for designing expressive domain APIs and data pipelines:
     !scala
     accounts.filter(_ belongsTo "John S.")
             .map(_.calculateInterest)
-            .filter(_ > threshold)
             .foldLeft(0)(_ + _)
             .into {x: Int =>
               updateBooks journalize(Ledger.INTEREST, x)
@@ -469,8 +468,6 @@ $$
 <center>
 𝜆𝑦.(𝜆𝑥.(𝑦(𝑥𝑥))𝜆𝑥.(𝑦(𝑥𝑥)))
 </center>
-
-
 
 
 ---
