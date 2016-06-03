@@ -11,13 +11,15 @@
 ---
 
 
-<img src="img/lambda.jpg" height="42" width="42">
+"Computer science is no more about computers than astronomy is about telescopes." 
 
-
-
-The 𝜆 calculus was introduced in the 1930s by Alonzo Church as a way of formalizing the concept of effective computability. 
+- Edsger Dijkstra 
 
 ---
+
+The 𝜆 calculus was introduced in the 1930s by Alonzo Church as a way of formalizing the concept of effective computability. 
+---
+
 
 The 𝜆 calculus is universal in the sense that any computable function can be e𝑥pressed and evaluated using this formalism. 
 $$
@@ -50,10 +52,6 @@ and a single function definition scheme: 𝜆𝑥.𝑥
 
 ---
 
-<img src="img/pure.png" height="42" width="42">
-<img src="img/impure.png" height="42" width="42">
-
----
 
 #Elements of the 𝜆 Calculus
 
@@ -373,6 +371,14 @@ The well-known startup accelerator [Y-combinator](https://www.ycombinator.com/) 
 #Challenge
 
 For fun try and prove that the Y-combinator can be expressed in terms of the S and K combinators: Y=SSK(S(K(SS(S(SSK))))K)
+
+---
+
+It's easy to think that lambda calculus is not much more than a bizarre, impractical form of abstract math, but it is absolutely foundational to programming.
+
+It provides a theoretical basis for functional programming as well as a rich set of simple, practical abstractions. 
+
+Good abstractions are hard to come by; there seems to be an inverse relationship between simplicity and ease, so the plain but powerful lambda is an indispensable tool to the programmer.
 
 ---
 
